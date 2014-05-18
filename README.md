@@ -36,16 +36,16 @@ from within your
 module.exports = ->
 
   @Given /^I am a website visitor using selenium$/, (callback) ->
-    return callback new Error 'Selenium not available' unless @selenium?
+    return callback new Error 'Selenium not available' unless @driver?
     callback()
 
   @When /^I go to the home page with selenium$/, (callback) ->
-    # @selenium.home() is a helper to navigate to the app's root url
-    @selenium.home().then callback, callback
+    # @home() is a helper to navigate to the app's root url
+    @home().then callback, callback
 
   @Then 'I should see "$text" using selenium', (text, callback) ->
-    # @selenium.driver is an instance of a WebDriverJS driver
-    @selenium.driver.getPageSource().then (source) ->
+    # @driver is an instance of a WebDriverJS driver
+    @driver.getPageSource().then (source) ->
       return callback() unless -1 is source.indexOf text 
       callback new Error "Expected to find #{text} on page"
     , callback
