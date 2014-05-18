@@ -1,0 +1,12 @@
+{
+  "name": "cucumber-selenium",
+  "description": "Selenium WebDriver support for CucumberJS",
+  "homepage": "https://github.com/xdissent/meteor-cucumber-selenium",
+  "author": "Greg Thornton <xdissent@me.com> (http://xdissent.com)",
+  "version": "0.0.1",
+  "git": "https://github.com/xdissent/meteor-cucumber-selenium.git",
+  "packages": {
+    "cucumber": "0.0.2",
+    "selenium": "0.0.1"
+  }
+}
